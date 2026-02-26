@@ -1,0 +1,105 @@
+/* DREAMY ANIMATED PASTEL BACKGROUND */
+body {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #ffd1e8, #ffe9f4, #ffd6f2, #ffecf7);
+    background-size: 300% 300%;
+    animation: dreamyBG 18s ease infinite;
+}
+
+/* Background Flow */
+@keyframes dreamyBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Glow Circles */
+.glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.g1 { background: #ff9ac2; top: 10%; left: 5%; animation: float 12s infinite ease-in-out; }
+.g2 { background: #ffb3e6; bottom: 10%; right: 5%; animation: float 15s infinite ease-in-out; }
+.g3 { background: #ffc8de; top: 50%; left: 40%; animation: float 18s infinite ease-in-out; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Soft Petals */
+.petals span {
+    position: fixed;
+    font-size: 30px;
+    animation: fall 10s linear infinite;
+    opacity: 0.7;
+}
+
+.petals span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.petals span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.petals span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.petals span:nth-child(4) { left: 70%; animation-delay: 6s; }
+.petals span:nth-child(5) { left: 85%; animation-delay: 8s; }
+
+@keyframes fall {
+    0% { top: -10%; transform: rotate(0deg); }
+    100% { top: 110%; transform: rotate(360deg); }
+}
+
+/* Heading */
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #ff2f7a;
+    margin-top: 20px;
+    text-shadow: 0 0 18px rgba(255, 0, 120, 0.4);
+}
+
+/* Subtitle */
+.subtitle {
+    margin-top: -10px;
+    margin-bottom: 40px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Glass Recording Box */
+.recording {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(255, 0, 150, 0.2);
+    animation: softFloat 6s infinite ease-in-out;
+}
+
+@keyframes softFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Recording Title */
+.recording h2 {
+    color: #d10062;
+    margin-bottom: 15px;
+}
+
+/* Audio Player */
+audio {
+    width: 100%;
+    border-radius: 10px;
+}
